@@ -6,3 +6,27 @@ function getValFromInp(id){
     console.log(id,value);
     return value;
 }
+
+function getBalance(){
+    const balanceAmnt =  document.getElementById('balance');
+    const balance = balanceAmnt.innerText;
+    console.log("Current Balance",Number(balance))
+    return Number(balance);
+}
+
+function setBalance(value){
+    const balanceAmnt = document.getElementById("balance");
+    balanceAmnt.innerText = value;
+}
+
+function show(id){
+    const moneyAdd = document.getElementById('addMoney');
+    const cashOut = document.getElementById('cashout');
+    console.log(`add money - ${moneyAdd} CashOut- ${cashOut}`);
+
+    moneyAdd.classList.add("hidden");
+    cashOut.classList.add("hidden");
+
+    const selected =  document.getElementById(id);
+    selected.classList.remove("hidden");
+}
